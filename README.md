@@ -66,9 +66,19 @@ npm run build
 {
   "statusLine": {
     "type": "command",
-    "command": "node D:/cc-kimi-usage/dist/index.js"
+    "command": "node \"D:/cc-kimi-usage/dist/index.js\""
   }
 }
+```
+已配置过claude-hud插件，可在后面加上cc-kimi-usage配置
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "{原配置命令} && node \"D:/cc-kimi-usage/dist/index.js\" "
+  }
+}
+ 
 ```
 
 **注意：**
