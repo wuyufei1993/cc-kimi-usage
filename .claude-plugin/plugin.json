@@ -8,5 +8,9 @@
   },
   "commands": [
     "./commands/setup.md"
-  ]
+  ],
+  "homepage": "https://github.com/wuyufei1993/cc-kimi-usage",
+  "repository": "https://github.com/wuyufei1993/cc-kimi-usage",
+  "license": "MIT",
+  "keywords": ["kimi code", "monitoring", "statusline", "claude-code"]
 }
