@@ -7,6 +7,8 @@ Claude Code 状态栏插件，用于显示 Kimi code 订阅套餐配额使用情
 ```
 ██░░░░░░░░ 20% (5h) (resets in 3h)|████████░░ 80% (Total) (resets in 2h 30m)
 ```
+<img width="1728" height="921" alt="image" src="https://github.com/user-attachments/assets/160b5929-595d-4214-b60d-ddb1627b6f4f" />
+
 
 达到 100% 时显示红色警告：
 ```
