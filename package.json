@@ -1,0 +1,21 @@
+{
+  "name": "kimi-usage",
+  "version": "1.0.0",
+  "description": "Claude Code statusline plugin for Kimi usage display",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["claude-code", "plugin", "kimi", "statusline"],
+  "author": "wuyufei",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
