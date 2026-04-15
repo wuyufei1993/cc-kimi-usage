@@ -29,7 +29,7 @@ Kimi ⚠ Limit reached (resets in 45m)
 ### 2.插件安装
 
 ```
-/plugin install claude-hud
+/plugin install cc-kimi-usage
 ```
 
 ### 3.重新加载插件
