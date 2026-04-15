@@ -1,9 +1,11 @@
 {
   "id": "cc-kimi-usage",
-  "name": "Claude Code CLI Kimi Usage Plugin",
+  "name": "cc-kimi-usage",
   "description": "Display Kimi code usage in Claude Code statusline.",
   "version": "0.0.1",
-  "author": "wuyufei1993",
+  "author": {
+    "name": "wuyufei1993"
+  },
   "commands": [
     "./commands/setup.md"
   ]
