@@ -3,7 +3,7 @@
   "name": "Claude Code CLI Kimi Usage Plugin",
   "description": "Display Kimi code usage in Claude Code statusline.",
   "version": "0.0.1",
-  "author": "nsxym",
+  "author": "wuyufei1993",
   "commands": [
     "./commands/setup.md"
   ]

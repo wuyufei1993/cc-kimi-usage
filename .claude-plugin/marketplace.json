@@ -1,0 +1,20 @@
+{
+  "name": "cc-kimi-usage",
+  "owner": {
+    "name": "wuyufei1993",
+    "email": "wuyufei1993@gmail.com"
+  },
+  "metadata": {
+    "description": "Claude Code statusline plugin for Kimi Code usage display",
+    "version": "0.0.1"
+  },
+  "plugins": [
+    {
+      "name": "cc-kimi-usage",
+      "source": "./",
+      "description": "Claude Code statusline plugin for Kimi Code usage display",
+      "category": "monitoring",
+      "tags": ["claude-code", "plugin", "kimi", "statusline"]
+    }
+  ]
+}
