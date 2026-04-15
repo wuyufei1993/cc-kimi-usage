@@ -66,7 +66,7 @@ npm run build
 {
   "statusLine": {
     "type": "command",
-    "command": "node cc-kimi-usage/dist/index.js"
+    "command": "node D:/cc-kimi-usage/dist/index.js"
   }
 }
 ```
