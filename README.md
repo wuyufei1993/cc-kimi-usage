@@ -44,6 +44,16 @@ Kimi ⚠ Limit reached (resets in 45m)
 ```
 /cc-kimi-usage:setup
 ```
+
+### 5.禁用插件（配置完成后，插件已经加载到statusLine中，禁用插件不会有影响，还能节省上下文。）
+
+```
+/plugin disable cc-kimi-usage
+```
+---
+## 删除插件
+将 *~/.claude/settings.json* 中的 *statusLine* json块删除即可，确保删除后的json完整，不会导致claude code启动报错。
+windows在 *C:\Users\用户名\.claude* 目录下
 ---
 
 ## 本地编译安装
