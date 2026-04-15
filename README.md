@@ -111,8 +111,7 @@ echo "" | node "D:/cc-kimi-usage/dist/index.js"
   "colors": {
     "usage": "brightBlue",
     "usageWarning": "brightMagenta",
-    "critical": "red",
-    "label": "dim"
+    "critical": "red"
   }
 }
 ```
@@ -129,11 +128,10 @@ echo "" | node "D:/cc-kimi-usage/dist/index.js"
 | `usage` | 正常使用率颜色（< 75%） | `brightBlue` |
 | `usageWarning` | 高使用率颜色（75% - 89%） | `brightMagenta` |
 | `critical` | 临界/限额用尽颜色（≥ 90% 和 100% 警告） | `red` |
-| `label` | "Kimi" 标签颜色 | `dim` |
 
 颜色值支持三种格式：
 
-1. **预设名称**：`dim`, `red`, `green`, `yellow`, `magenta`, `cyan`, `brightBlue`, `brightMagenta`
+1. **预设名称**：`red`, `green`, `yellow`, `magenta`, `cyan`, `brightBlue`, `brightMagenta`
 2. **256 色索引**：`208`（0-255 的整数）
 3. **十六进制色值**：`"#ff9d00"`
 
