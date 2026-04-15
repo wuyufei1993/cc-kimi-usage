@@ -13,7 +13,38 @@ Claude Code 状态栏插件，用于显示 Kimi code 订阅套餐配额使用情
 Kimi ⚠ Limit reached (resets in 45m)
 ```
 
-## 安装
+## 说明
+
+使用 [claude-hud](https://github.com/jarrodwatts/claude-hud) 插件发现只支持官方订阅的usage显示，于是搓了一个显示kimi code订阅套餐用量的插件
+
+---
+
+## Claude Code CLI 插件方式安装
+
+### 1.安装插件市场
+
+```
+/plugin marketplace add wuyufei1993/cc-kimi-usage
+```
+### 2.插件安装
+
+```
+/plugin install claude-hud
+```
+
+### 3.重新加载插件
+
+```
+/reload-plugins
+```
+
+### 4.配置插件
+```
+/cc-kimi-usage:setup
+```
+---
+
+## 本地编译安装
 
 ### 1. 编译插件
 
@@ -22,7 +53,55 @@ npm ci
 npm run build
 ```
 
-#### 2. 自定义颜色（不配置使用默认颜色）
+### 2. 配置 Claude Code settings.json
+
+编辑 `~/.claude/settings.json`（Windows 路径为 `C:\Users\用户名\.claude\settings.json`），添加 `statusLine` 配置：
+
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "node \"D:/cc-kimi-usage/dist/index.js\""
+  }
+}
+```
+已配置过claude-hud插件，可在后面加上cc-kimi-usage配置
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "{原配置命令} && node \"D:/cc-kimi-usage/dist/index.js\" "
+  }
+}
+ 
+```
+
+**注意：**
+- `type` 必须是 `"command"`
+- `command` 是完整的可执行命令字符串
+- 路径必须是**绝对路径**
+- Windows 下 JSON 中反斜杠需要转义，建议直接用正斜杠：`"node \"D:/cc-kimi-usage/dist/index.js\""`
+
+### 3. 手动测试命令
+
+在终端中直接运行一次，确认插件有输出：
+
+```bash
+# Windows
+node "D:/cc-kimi-usage/dist/index.js"
+
+# 或模拟 stdin 管道（更接近 statusline 实际运行方式）
+echo "" | node "D:/cc-kimi-usage/dist/index.js"
+```
+
+如果没有输出，检查 Node.js 版本是否 ≥ 18（需要内置 `fetch`）。
+
+### 4. 重启 Claude Code
+
+**必须完全退出并重新启动 Claude Code**，`statusLine` 配置修改后不会热生效。
+
+---
+## 自定义颜色（不配置使用默认颜色）
 创建配置文件 `~/.claude/kimi-usage-config.json`：
 
 ```json
@@ -57,53 +136,6 @@ npm run build
 1. **预设名称**：`dim`, `red`, `green`, `yellow`, `magenta`, `cyan`, `brightBlue`, `brightMagenta`
 2. **256 色索引**：`208`（0-255 的整数）
 3. **十六进制色值**：`"#ff9d00"`
-
-### 3. 配置 Claude Code settings.json
-
-编辑 `~/.claude/settings.json`（Windows 路径为 `C:\Users\用户名\.claude\settings.json`），添加 `statusLine` 配置：
-
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "node \"D:/cc-kimi-usage/dist/index.js\""
-  }
-}
-```
-已配置过claude-hud插件，可在后面加上cc-kimi-usage配置
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "{原配置命令} && node \"D:/cc-kimi-usage/dist/index.js\" "
-  }
-}
- 
-```
-
-**注意：**
-- `type` 必须是 `"command"`
-- `command` 是完整的可执行命令字符串
-- 路径必须是**绝对路径**
-- Windows 下 JSON 中反斜杠需要转义，建议直接用正斜杠：`"node \"D:/cc-kimi-usage/dist/index.js\""`
-
-### 4. 手动测试命令
-
-在终端中直接运行一次，确认插件有输出：
-
-```bash
-# Windows
-node "D:/cc-kimi-usage/dist/index.js"
-
-# 或模拟 stdin 管道（更接近 statusline 实际运行方式）
-echo "" | node "D:/cc-kimi-usage/dist/index.js"
-```
-
-如果没有输出，检查 Node.js 版本是否 ≥ 18（需要内置 `fetch`）。
-
-### 5. 重启 Claude Code
-
-**必须完全退出并重新启动 Claude Code**，`statusLine` 配置修改后不会热生效。
 
 ---
 
