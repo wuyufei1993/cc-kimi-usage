@@ -114,7 +114,7 @@ If a write fails with `File has been unexpectedly modified`, re-read the file an
 - If `settings.json` already has `statusLine.command` and it already contains `cc-kimi-usage`, do not modify it (setup already ran).
 - Otherwise, set `statusLine.command` to `{GENERATED_COMMAND}`.
 
-Write the merged config:
+Backup config file `settings.json`, write the merged config:
 
 ```json
 {
