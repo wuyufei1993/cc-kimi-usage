@@ -53,7 +53,7 @@ Kimi ⚠ Limit reached (resets in 45m)
 ---
 ## 删除插件
 
-将 *~/.claude/settings.json* 中的 *statusLine* json块删除即可，确保删除后的json完整，不会导致claude code启动报错。   
+将 *~/.claude/settings.json* 中的 *statusLine* json块删除即可，确保删除后的json完整，且不会导致claude code启动报错。   
 windows在 *C:/Users/用户名/.claude* 目录下
 
 ---
